@@ -269,3 +269,10 @@ T List<T>::operator[](int position)
 
 	return this->current_->get_value();
 }
+
+template<typename T>
+std::ostream& operator<<(std::ostream& out, const List<T>& obj)
+{
+	out << obj.to_string();
+	return out;
+}
